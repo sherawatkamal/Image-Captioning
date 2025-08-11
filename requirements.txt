@@ -1,0 +1,6 @@
+tensorflow>=2.8.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+jupyter>=1.0.0
+notebook>=6.4.0
+ipykernel>=6.0.0
