@@ -29,6 +29,11 @@ ProjectAssignment2/
 ### Objective
 Implement a ResNet-20 architecture from scratch and train it on the CIFAR-10 dataset.
 
+### Training Results
+![ResNet-20 Training on CIFAR-10](plots/question1_resnet20_cifar10.png)
+
+*Training and validation accuracy/loss curves for ResNet-20 on CIFAR-10 dataset over 20 epochs*
+
 ### Key Features
 - **ResNet-20 Architecture**: Custom implementation with residual blocks
 - **Dataset**: CIFAR-10 (32x32 RGB images, 10 classes)
@@ -51,6 +56,11 @@ Implement a ResNet-20 architecture from scratch and train it on the CIFAR-10 dat
 ### Objective
 Compare different ResNet configurations with varying depths and optimizers on both CIFAR-10 and CIFAR-100 datasets.
 
+### Configuration Comparison Results
+![Multi-Configuration ResNet Training Comparison](plots/question2_multi_config_comparison.png)
+
+*Training comparison across different ResNet configurations: n=7 with RMSprop, n=7 with Adam, and n=5 with SGD*
+
 ### Configurations Tested
 1. **ResNet with n=7 layers + RMSprop optimizer** (batch size: 128)
 2. **ResNet with n=7 layers + Adam optimizer** (batch size: 64)
@@ -70,6 +80,11 @@ Compare different ResNet configurations with varying depths and optimizers on bo
 ### Objective
 Implement transfer learning using pre-trained ResNet-50 on ImageNet weights for CIFAR-10 and CIFAR-100 classification.
 
+### Transfer Learning Results
+![ResNet-50 Transfer Learning Results](plots/question3_transfer_learning.png)
+
+*Training and validation curves for ResNet-50 transfer learning, showing faster convergence compared to training from scratch*
+
 ### Approach
 - **Base Model**: ResNet-50 pre-trained on ImageNet
 - **Transfer Strategy**: Freeze base model, add custom classification head
@@ -87,6 +102,11 @@ Implement transfer learning using pre-trained ResNet-50 on ImageNet weights for 
 - Better feature representation for small datasets
 
 ## Technical Implementation
+
+### ResNet Architecture Overview
+![ResNet Architecture](plots/resnet_architecture.png)
+
+*ResNet architecture showing the flow from input through residual blocks to output classification*
 
 ### Residual Block Architecture
 ```python
@@ -117,6 +137,15 @@ def residual_block(x, filters, downsample=False):
 - Global average pooling for spatial dimension reduction
 
 ## Training and Evaluation
+
+### Results Summary
+The following visualizations demonstrate the training performance across all three questions:
+
+| Question | Architecture | Dataset | Key Results |
+|----------|--------------|---------|-------------|
+| **Q1** | ResNet-20 | CIFAR-10 | Custom implementation achieves ~80% validation accuracy |
+| **Q2** | Multi-Config | CIFAR-10/100 | Adam optimizer shows best convergence, deeper models need more epochs |
+| **Q3** | ResNet-50 | CIFAR-10/100 | Transfer learning achieves faster convergence and higher accuracy |
 
 ### Data Preprocessing
 - Normalization: Pixel values scaled to [0, 1] range
