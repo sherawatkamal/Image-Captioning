@@ -220,3 +220,4 @@ For questions or discussions about this project, please refer to the course inst
 ---
 
 *This README provides a comprehensive overview of the Deep Learning Project Assignment 3, covering implementation details, experimental results, and technical insights gained from working with ResNet architectures.*
+
